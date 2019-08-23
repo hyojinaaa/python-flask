@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %} 
+<h2>Movie Title</h2>
+<p>{{ movie.title }}</p>
+
+<h2>Movie Released</h2>
+<p>{{ movie.year }}</p>
+
+<h2>Movie Description</h2>
+<p>{{ movie.description }}</p>
+
+<hr>
+{% for person in movie.actors %}
+ {{person.actor}} plays {{person.role}}<br />
+{% endfor %}
+
+ {% endblock %}
